@@ -1,5 +1,11 @@
+import DashboardTitle from "../../components/DashboardTitle";
+
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <DashboardTitle>Dashboard</DashboardTitle>
+    </div>
+  );
 };
 
 export default Dashboard;
