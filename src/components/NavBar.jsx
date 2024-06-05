@@ -11,13 +11,13 @@ const NavBar = () => {
   console.log(user);
   return (
     <nav className="sticky top-0 z-10 glass">
-      <div className="navbar  max-w-7xl mx-auto">
+      <div className="mx-auto navbar max-w-7xl">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -53,12 +53,12 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost text-xl">
+          <Link to={"/"} className="text-xl btn btn-ghost">
             Poem Gallery
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="hidden navbar-center lg:flex">
+          <ul className="px-1 menu menu-horizontal">
             <li>
               <a>Item 1</a>
             </li>
@@ -97,9 +97,9 @@ const NavBar = () => {
                     <img
                       alt="Tailwind CSS Navbar component"
                       src={
-                        !user?.photoURL
-                          ? "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                          : user.photoURL
+                        user?.photoURL
+                          ? user.photoURL
+                          : "https://avatar.iran.liara.run/public"
                       }
                     />
                   </div>

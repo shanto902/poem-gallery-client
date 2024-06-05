@@ -7,6 +7,9 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import PrivateRoute from "./private/PrivateRoute";
 import Register from "../pages/Register";
 import Profile from "../pages/dashboard/Profile";
+import EditProfile from "../pages/dashboard/EditProfile";
+import AddPoems from "../pages/dashboard/AddPoems";
+import AllPoems from "../pages/dashboard/AllPoems";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +45,21 @@ export const router = createBrowserRouter([
       {
         path: "profile",
         element: <Profile />,
+      },
+      {
+        path: "profile/edit/:id",
+        element: <EditProfile />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/user/get/${params.id}`),
+      },
+
+      {
+        path: "add-poem",
+        element: <AddPoems />,
+      },
+      {
+        path: "all-poems",
+        element: <AllPoems />,
       },
     ],
   },

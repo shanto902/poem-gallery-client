@@ -6,10 +6,10 @@ const DashboardLayout = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content  ">
+      <div className="drawer-content ">
         <label
           htmlFor="my-drawer-2"
-          className=" drawer-button text-4xl  lg:hidden p-2 bg-base-200 absolute"
+          className="absolute p-2 text-4xl drawer-button lg:hidden bg-base-200"
         >
           <BiMenu />
         </label>
@@ -26,9 +26,9 @@ const DashboardLayout = () => {
           className="drawer-overlay "
         ></label>
 
-        <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content space-y-2">
-          <Link to={"/"} className="btn btn-ghost text-xl">
-            <BiBookOpen className="  text-2xl mt-1" /> Poem Gallery
+        <ul className="min-h-full p-4 space-y-2 menu w-80 bg-base-200 text-base-content">
+          <Link to={"/"} className="text-xl btn btn-ghost">
+            <BiBookOpen className="mt-1 text-2xl " /> Poem Gallery
           </Link>
           <li>
             <NavLink to={"/dashboard/"} end>
@@ -37,6 +37,14 @@ const DashboardLayout = () => {
           </li>
           <li>
             <NavLink to={`/dashboard/profile`}>Profile</NavLink>
+          </li>
+
+          <li>
+            <NavLink to={`/dashboard/add-poem`}>Add Poem</NavLink>
+          </li>
+
+          <li>
+            <NavLink to={`/dashboard/all-poems`}>My Poems</NavLink>
           </li>
         </ul>
       </div>

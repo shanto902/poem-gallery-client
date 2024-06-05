@@ -10,6 +10,7 @@ const GoogleLogin = () => {
         const userInfo = {
           email: data?.user?.email,
           name: data?.user?.displayName,
+          imageURL: data?.user?.photoURL,
         };
         fetch("http://localhost:5000/user", {
           method: "POST",
@@ -27,7 +28,7 @@ const GoogleLogin = () => {
   };
 
   return (
-    <button onClick={handleGoogleSignIn} className="btn w-full">
+    <button onClick={handleGoogleSignIn} className="w-full btn">
       <div className="flex items-center gap-2">
         <FcGoogle size={24} />
         <p>Google</p>
