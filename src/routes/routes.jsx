@@ -10,6 +10,9 @@ import Profile from "../pages/dashboard/Profile";
 import EditProfile from "../pages/dashboard/EditProfile";
 import AddPoems from "../pages/dashboard/AddPoems";
 import AllPoems from "../pages/dashboard/AllPoems";
+import About from "../pages/About";
+import AllPoemsHome from "../pages/AllPoemsHome";
+import EditPoems from "../pages/dashboard/EditPoems";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +22,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "all-poems",
+        element: <AllPoemsHome />,
       },
     ],
   },
@@ -50,7 +61,7 @@ export const router = createBrowserRouter([
         path: "profile/edit/:id",
         element: <EditProfile />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/user/get/${params.id}`),
+          fetch(`${import.meta.env.VITE_url}/user/get/${params.id}`),
       },
 
       {
@@ -60,6 +71,13 @@ export const router = createBrowserRouter([
       {
         path: "all-poems",
         element: <AllPoems />,
+      },
+
+      {
+        path: "all-poems/edit/:id",
+        element: <EditPoems />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_url}/poem/${params.id}`),
       },
     ],
   },

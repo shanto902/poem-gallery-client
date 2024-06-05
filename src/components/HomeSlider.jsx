@@ -40,11 +40,11 @@ const HomeSlider = () => {
         hide: true,
       }}
       modules={[Scrollbar]}
-      className="w-full h-full mySwiper"
+      className="w-full h-full mySwiper "
     >
       {sliderData.map((slider, i) => (
         <SwiperSlide key={i}>
-          <div className="relative flex items-center justify-center h-full">
+          <div className="relative flex items-center justify-center h-full overflow-hidden">
             {/* Background Image */}
             <img
               className="absolute inset-0 object-cover w-full h-full"

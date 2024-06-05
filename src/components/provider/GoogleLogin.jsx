@@ -12,7 +12,7 @@ const GoogleLogin = () => {
           name: data?.user?.displayName,
           imageURL: data?.user?.photoURL,
         };
-        fetch("http://localhost:5000/user", {
+        fetch(`${import.meta.env.VITE_url}/user`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { BiBookOpen } from "react-icons/bi";
+import { LuLogIn } from "react-icons/lu";
 
 const NavBar = () => {
   const { user, logout } = useAuth();
@@ -32,58 +34,50 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-2"
             >
               <li>
-                <a>Item 1</a>
+                <NavLink to={"/"}>Home</NavLink>
+              </li>
+              {user && (
+                <li>
+                  <NavLink to={"/dashboard"}>Dashboard</NavLink>
+                </li>
+              )}
+              <li>
+                <NavLink to={"/all-poems"}>All Poems</NavLink>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
+                <NavLink to={"/about"}>About Us</NavLink>
               </li>
             </ul>
           </div>
           <Link to={"/"} className="text-xl btn btn-ghost">
-            Poem Gallery
+            <BiBookOpen className="mt-1 text-2xl " /> Poem Gallery
           </Link>
         </div>
         <div className="hidden navbar-center lg:flex">
-          <ul className="px-1 menu menu-horizontal">
+          <ul className="gap-2 px-1 menu menu-horizontal">
             <li>
-              <a>Item 1</a>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>
+            {user && (
+              <li>
+                <NavLink to={"/dashboard"}>Dashboard</NavLink>
+              </li>
+            )}
+            <li>
+              <NavLink to={"/all-poems"}>All Poems</NavLink>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
+              <NavLink to={"/about"}>About Us</NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
           {!user ? (
-            <Link to={"/login"} className="btn">
-              Login
+            <Link to={"/login"} className="btn btn-ghost">
+              <LuLogIn className="mt-1 " /> Login
             </Link>
           ) : (
             <div>
@@ -111,7 +105,6 @@ const NavBar = () => {
                   <li>
                     <Link to={"/dashboard/profile"} className="justify-between">
                       Profile
-                      <span className="badge">New</span>
                     </Link>
                   </li>
 
