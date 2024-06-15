@@ -15,7 +15,6 @@ const usePoems = () => {
       const data = await response.json();
       setPoems(data);
     } catch (error) {
-      console.error(error);
       setError(error);
     } finally {
       setLoading(false);

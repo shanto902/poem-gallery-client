@@ -36,17 +36,43 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="min-h-screen hero bg-base-200">
+        <div className="flex-col gap-10 hero-content lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <div className="flex flex-col items-center justify-center flex-1 h-screen bg-gray-100">
+              <h1 className="mb-6 text-3xl font-bold">
+                Welcome to our digital gallery
+              </h1>
+              <p className="mb-8 text-lg text-center">
+                Where words and images dance in harmony,
+                <br />
+                Upon this login page, a doorway to artistic reverie.
+              </p>
+              <p className="mb-4">
+                Before you enter, take a moment to pause and see,
+                <br />
+                The wonders that await, both old and new, for you and me.
+              </p>
+              <p className="mb-4">
+                With every login, a journey begins,
+                <br />
+                Through corridors of creativity, where inspiration spins.
+              </p>
+              <p className="mb-4">
+                A canvas awaits your touch, a stage for your story to unfold,
+                <br />
+                In this virtual realm of dreams, where visions are bold.
+              </p>
+
+              <p className="mt-4">
+                Don't have an account?{" "}
+                <Link to="/register" className="text-red-500">
+                  Register
+                </Link>
+              </p>
+            </div>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="flex-1 w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
             <div className="card-body">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">
@@ -77,22 +103,15 @@ const Login = () => {
                   {errors.password && <span>This field is required</span>}
                 </div>
 
-                <div className="form-control mt-6">
+                <div className="mt-6 form-control">
                   <input
-                    className="btn bg-red-500 text-white"
+                    className="text-white bg-success btn"
                     type="submit"
                     value="Login"
                   />
                 </div>
-                <div className="mt-6"></div>
-                <div className="mt-6"></div>
               </form>
-              <p>
-                New here?{" "}
-                <Link to="/register" className="text-red-500">
-                  Register
-                </Link>
-              </p>
+              <div className="divider">OR</div>
               <GoogleLogin />
             </div>
           </div>

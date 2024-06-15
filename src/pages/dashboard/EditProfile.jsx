@@ -28,8 +28,8 @@ export default function EditProfile() {
           body: JSON.stringify(userData),
         }
       );
-      const result = await response.json();
-      console.log(result);
+      await response.json();
+
       navigate("/dashboard/profile");
     } catch (error) {
       console.error("Error updating profile:", error);

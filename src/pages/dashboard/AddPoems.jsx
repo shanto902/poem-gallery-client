@@ -118,7 +118,7 @@ const AddPoems = () => {
             <input
               className="p-4 mt-4 btn btn-md w-fit"
               type="submit"
-              value="Add product"
+              value="Add Poem"
             />
           </div>
         </form>

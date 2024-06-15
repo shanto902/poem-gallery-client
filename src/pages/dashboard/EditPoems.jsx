@@ -8,7 +8,7 @@ import DashboardTitle from "../../components/DashboardTitle";
 const EditPoems = () => {
   const poem = useLoaderData();
 
-  const { register, handleSubmit, setValue, reset } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
 
   const editorRef = useRef(null);
 
@@ -18,7 +18,7 @@ const EditPoems = () => {
 
   const onSubmit = async (data) => {
     const token = localStorage.getItem("token");
-    console.log(data);
+
     await fetch(`${import.meta.env.VITE_url}/poem/${poem._id}`, {
       method: "PATCH",
       headers: {

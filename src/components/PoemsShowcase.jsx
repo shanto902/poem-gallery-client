@@ -3,16 +3,17 @@ import usePoems from "../hooks/usePoems";
 import PaddingContainer from "./PaddingContainer";
 import parse from "html-react-parser";
 import { TfiWrite } from "react-icons/tfi";
+import Loading from "./Loading";
 const PoemsShowcase = () => {
   const { poems, loading, error } = usePoems();
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>Error: {error.message}</div>;
-  console.log(poems);
+
   return (
     <section className="py-10 bg-base-200">
       <PaddingContainer>
         <h2 className="my-5 text-3xl font-bold text-center">Latest Poems</h2>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-5 justify-items-center lg:grid-cols-3 md:grid-cols-2">
           {poems.length > 0 &&
             poems
               .reverse()

@@ -1,6 +1,12 @@
 import { BiBookOpen, BiMenu } from "react-icons/bi";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import PaddingContainer from "../components/PaddingContainer";
+import {
+  AiOutlineFileAdd,
+  AiOutlineProfile,
+  AiOutlineUnorderedList,
+} from "react-icons/ai";
+import { MdOutlineSpaceDashboard } from "react-icons/md";
 
 const DashboardLayout = () => {
   return (
@@ -32,19 +38,27 @@ const DashboardLayout = () => {
           </Link>
           <li>
             <NavLink to={"/dashboard/"} end>
-              Dashboard
+              <MdOutlineSpaceDashboard /> Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/dashboard/profile`}>Profile</NavLink>
+            <NavLink to={`/dashboard/profile`}>
+              <AiOutlineProfile /> Profile
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to={`/dashboard/add-poem`}>Add Poem</NavLink>
+            <NavLink to={`/dashboard/add-poem`}>
+              <AiOutlineFileAdd /> Add Poem
+            </NavLink>
           </li>
 
           <li>
-            <NavLink to={`/dashboard/all-poems`}>My Poems</NavLink>
+            <NavLink to={`/dashboard/all-poems`}>
+              {" "}
+              <AiOutlineUnorderedList />
+              My Poems
+            </NavLink>
           </li>
         </ul>
       </div>

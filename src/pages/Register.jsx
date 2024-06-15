@@ -37,9 +37,7 @@ const Register = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(userInfo),
-          })
-            .then((res) => res.json())
-            .then((data) => console.log(data));
+          }).then((res) => res.json());
         }
       });
 
@@ -52,16 +50,30 @@ const Register = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="min-h-screen hero bg-base-200"
     >
-      <div className="flex-col hero-content lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+      <div className="flex-col gap-10 hero-content lg:flex-row-reverse">
+        <div className="flex-1 text-center lg:text-left">
+          <h1 className="mb-6 text-2xl font-bold">
+            Upon this registration page, a new chapter begins,
+          </h1>
+          <p className="py-2">
+            Where dreams take flight, and adventure beckons.
           </p>
+          <p className="py-2">
+            Enter your details, like seeds in fertile ground,
+          </p>
+          <p className="py-2">
+            To sow the fields of possibility, where wonders abound.
+          </p>
+          <p className="py-2">With each keystroke, a promise blooms,</p>
+          <p className="py-2">Of connections made and futures groomed.</p>
+          <p className="py-2">
+            In this digital tapestry, you'll find your place,
+          </p>
+          <p className="py-2">A canvas awaiting your unique embrace.</p>
+          <p className="py-2">So register now, and join our fold,</p>
+          <p className="py-2">Where stories unfold and destinies are told.</p>
         </div>
-        <div className="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
+        <div className="flex-1 w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
           <div className="card-body">
             <div className="form-control">
               <label className="label">
@@ -126,18 +138,19 @@ const Register = () => {
             )}
             <div className="mt-6 form-control">
               <input
-                className="text-white bg-red-500 btn"
+                className="text-white bg-success btn"
                 type="submit"
                 value="Register"
               />
             </div>
+            <div className="divider">OR</div>
+
+            <GoogleLogin />
+
             <div className="mt-6">
-              <GoogleLogin />
-            </div>
-            <div className="mt-6">
-              <p>
+              <p className="text-center">
                 Already have an account?{" "}
-                <Link to="/login" className="text-red-500">
+                <Link to="/login" className="text-red-500 btn-link">
                   Login
                 </Link>
               </p>

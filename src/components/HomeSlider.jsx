@@ -56,7 +56,7 @@ const HomeSlider = () => {
             <div className="absolute inset-0 bg-white opacity-50"></div>
 
             {/* Content */}
-            <div className="z-20 space-y-5 text-black max-w-7xl">
+            <div className="z-20 mx-10 space-y-5 text-black max-w-7xl">
               <h2 className="text-4xl font-bold drop-shadow-xl ">
                 {slider.title}
               </h2>

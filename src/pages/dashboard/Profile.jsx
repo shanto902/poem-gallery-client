@@ -13,8 +13,6 @@ const Profile = () => {
       .then((data) => setUserInfo(data));
   }, [user]);
 
-  console.log(userInfo);
-  console.log(user);
   return (
     <>
       <DashboardTitle>Profile</DashboardTitle>

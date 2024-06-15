@@ -10,7 +10,6 @@ const NavBar = () => {
     await logout();
   };
 
-  console.log(user);
   return (
     <nav className="sticky top-0 z-10 glass">
       <div className="mx-auto navbar max-w-7xl">
