@@ -18,22 +18,28 @@
 
   <section>
     <h2>Technologies Used</h2>
-    <ul>
+      <ul>
       <li>React - A JavaScript library for building user interfaces.</li>
       <li>DaisyUI - A component library for Tailwind CSS.</li>
       <li>Tailwind CSS - A utility-first CSS framework for rapid UI development.</li>
       <li>Firebase - A platform for building web and mobile applications, providing authentication, database, and hosting services.</li>
+      <li>React Quill - A rich text editor component for React applications.</li>
+      <li>React Hook Form - A library for managing form state and validation in React applications.</li>
+      <li>Swiper - A modern, mobile-friendly slider library for React.</li>
+      <li>Recharts - A charting library for React applications, providing customizable charts and graphs.</li>
     </ul>
   </section>
 
   <section>
     <h2>Features</h2>
     <ul>
-      <li>Display Poems: Fetch and display poems from the Poem Gallery API.</li>
-      <li>Add Poems: Create new poems using a form with a rich text editor.</li>
+       <li>Display Poems: Fetch and display poems from the Poem Gallery API.</li>
+      <li>Add Poems: Create new poems using a form with a rich text editor (React Quill).</li>
       <li>Edit Poems: Update existing poems with a form including a rich text editor.</li>
       <li>Delete Poems: Remove poems from the database.</li>
       <li>Authentication: Secure user authentication using Firebase Authentication.</li>
+      <li>Slider: Implement sliders for showcasing home slider using Swiper.</li>
+      <li>Charts: Visualize data such as poem statistics using Recharts.</li>
     </ul>
 
   </section>
