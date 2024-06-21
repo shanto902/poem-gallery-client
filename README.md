@@ -42,7 +42,7 @@
   <section>
     <h2>Setup Instructions</h2>
     <ol>
-      <li>Clone the repository: <code>git clone https://github.com/your-repo.git</code></li>
+      <li>Clone the repository: <code>git clone https://github.com/shanto902/poem-gallery-client.git</code></li>
       <li>Install dependencies: <code>npm install</code></li>
       <li>Set up Firebase:
         <ul>
