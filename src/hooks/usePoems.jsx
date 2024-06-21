@@ -9,6 +9,7 @@ const usePoems = () => {
     setLoading(true);
     try {
       const response = await fetch(`${import.meta.env.VITE_url}/poems`);
+      console.log(import.meta.env.VITE_url);
       if (!response.ok) {
         throw new Error("Failed to fetch poems");
       }

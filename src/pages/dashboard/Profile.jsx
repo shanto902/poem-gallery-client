@@ -17,7 +17,7 @@ const Profile = () => {
     <>
       <DashboardTitle>Profile</DashboardTitle>
 
-      <div className="flex flex-col-reverse items-center justify-between h-[50vh] mt-10 md:flex-row">
+      <div className="flex flex-col-reverse items-center justify-around h-[50vh] mt-10 md:flex-row">
         <div className="space-y-2 ">
           <h2 className="text-xl font-bold ">Name : {userInfo?.name} </h2>
 
@@ -29,7 +29,7 @@ const Profile = () => {
         </div>
         <div>
           <div className="avatar">
-            <div className="w-40 rounded">
+            <div className="w-40 ">
               <img
                 src={
                   userInfo?.imageURL
@@ -44,7 +44,7 @@ const Profile = () => {
       <div className="flex items-center justify-center">
         <Link
           to={`/dashboard/profile/edit/${userInfo?._id}`}
-          className="mx-auto mt-10 btn btn-outline btn-md"
+          className="mx-auto mt-10 rounded-none btn btn-md"
         >
           Edit Profile
         </Link>

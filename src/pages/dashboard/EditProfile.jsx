@@ -61,28 +61,28 @@ export default function EditProfile() {
             className="px-1 py-2 bg-slate-50"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-row items-center gap-2">
           <label htmlFor="gender">Gender</label>
           <select
             defaultValue={data?.gender}
-            className="w-full max-w-xs px-1 py-2 select select-bordered bg-slate-50"
+            className="w-full max-w-xs px-1 py-2 rounded-none select select-bordered bg-slate-50"
             {...register("gender", { required: true })}
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
           </select>
-        </div>
-        <div className="flex flex-col">
+
           <label htmlFor="age">Age</label>
           <input
             {...register("age", { required: true })}
             type="number"
             name="age"
             defaultValue={data?.age}
-            className="px-1 py-2 bg-slate-50"
+            className="w-full px-1 py-2 bg-slate-50"
           />
         </div>
+
         <div className="flex flex-col">
           <label htmlFor="mobileNumber">Mobile</label>
           <input
@@ -103,11 +103,19 @@ export default function EditProfile() {
             className="px-1 py-2 bg-slate-50"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-row self-center gap-5">
           <input
             type="submit"
             value="Update Profile"
-            className="px-1 py-2 text-white btn bg-slate-950"
+            className="py-2 text-white rounded-none btn-success btn w-fit btn-md"
+          />
+          <input
+            onClick={() => {
+              navigate("/dashboard/profile");
+            }}
+            type="button"
+            value="Cancel"
+            className="py-2 text-white rounded-none btn-error btn w-fit btn-md"
           />
         </div>
       </form>

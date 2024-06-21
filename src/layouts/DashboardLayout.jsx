@@ -1,6 +1,5 @@
 import { BiBookOpen, BiMenu } from "react-icons/bi";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import PaddingContainer from "../components/PaddingContainer";
 import {
   AiOutlineFileAdd,
   AiOutlineProfile,
@@ -19,10 +18,8 @@ const DashboardLayout = () => {
         >
           <BiMenu />
         </label>
-        <div className="mt-2">
-          <PaddingContainer>
-            <Outlet />
-          </PaddingContainer>
+        <div className="px-5 mt-5">
+          <Outlet />
         </div>
       </div>
       <div className="drawer-side">
