@@ -47,7 +47,7 @@
       <li>Set up Firebase:
         <ul>
           <li>Create a Firebase project at <a href="https://console.firebase.google.com/">Firebase Console</a>.</li>
-          <li>Enable Firebase Authentication and Firestore.</li>
+          <li>Enable Firebase Authentication </li>
           <li>Copy Firebase configuration details (apiKey, authDomain, projectId, etc.) to your React project.</li>
         </ul>
       </li>
